@@ -1,0 +1,22 @@
+<!--
+  Generated template for the FormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<form  #form="ngForm"  NgNoValidate>
+    <h1>Phone Book Forum</h1>
+    <hr>
+    <div >
+   Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text"ngModel name="name"size=30 required><br>
+    </div>
+    <div>
+     Phone Number:
+      <input type="text"ngModel name="phoneNumber" size=30 required><br>
+    </div>  
+      <button (click)="Add(form.value)">Add</button>
+      <button (click)="Delete(form.value)">Delete</button>
+     
+  </form>
+  
