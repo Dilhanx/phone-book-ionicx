@@ -16,7 +16,7 @@ import 'rxjs/Rx';
 })
 export class ListPage {
   list=[]
-  title =  "Phone Book List";
+  title =  "Contact List";
   constructor(public navCtrl: NavController, public navParams: NavParams,private htpp:Http) {
   }
   
