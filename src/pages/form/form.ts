@@ -16,6 +16,7 @@ import 'rxjs/Rx';
 })
 export class FormPage {
   message
+  title =  "Form";
   constructor(public navCtrl: NavController, public navParams: NavParams,private htpp:Http) {
   }
 

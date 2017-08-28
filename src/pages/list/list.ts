@@ -16,12 +16,23 @@ import 'rxjs/Rx';
 })
 export class ListPage {
   list=[]
+  title =  "Phone Book List";
   constructor(public navCtrl: NavController, public navParams: NavParams,private htpp:Http) {
   }
   
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListPage');
+    //this.htpp.get("https://phone-book-sailsx.herokuapp.com/contact").map(res=> res.json()) .subscribe(data =>{ this.list=data});
+    
+  }
+  ngOnInit(){
+    console.log('ionViewDidLoad ListPage');
     this.htpp.get("https://phone-book-sailsx.herokuapp.com/contact").map(res=> res.json()) .subscribe(data =>{ this.list=data});
+  }
+  doRefresh(refresher){
+    console.log('RefreshListPage');
+    this.htpp.get("https://phone-book-sailsx.herokuapp.com/contact").map(res=> res.json()) .subscribe(data =>{ this.list=data});
+    refresher.complete();
   }
 
 }
