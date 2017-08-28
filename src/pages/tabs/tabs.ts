@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
-
+import {  NavController } from 'ionic-angular';
+import { HomePage } from '../home/home';
+import { FormPage } from '../form/form';
+import { ListPage } from '../list/list';
 /**
  * Generated class for the TabsPage tabs.
  *
@@ -8,16 +10,16 @@ import { IonicPage, NavController } from 'ionic-angular';
  * more info on providers and Angular DI.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  home1Root = 'HomePage'
-  form1Root = 'FormPage'
-  list1Root = 'ListPage'
+  homeRoot = HomePage
+  formRoot = FormPage
+  listRoot = ListPage
 
 
   constructor(public navCtrl: NavController) {}
