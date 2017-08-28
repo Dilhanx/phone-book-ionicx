@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            {{title}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content>
+            pullingText="Pull to refresh" refreshingSpinner="circles"
+        </ion-refresher-content>
+
+    </ion-refresher>
+    <div class="list" *ngFor="let entry of list">
+        <div class="details">
+            <span>
+            
+            <ul style="background-color: transparent ;"> 
+                    <li><i>Name: {{entry.name}}</i></li>
+                    <li><i>Number: {{entry.phoneNumber}}</i></li><br>
+                    
+            </ul>   
+           
+        </span>
+        </div>
+    </div>
+
+
+
+
+</ion-content>

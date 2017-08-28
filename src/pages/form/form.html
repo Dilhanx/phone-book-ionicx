@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" NgNoValidate>
+
+    <div>
+      Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" ngModel name="name" size=30 required><br>
+    </div>
+    <div>
+      Phone Number:
+      <input type="text" ngModel name="phoneNumber" size=30 required><br>
+    </div>
+    <button ion-button (click)="Add(form.value)">Add</button>
+    <button ion-button (click)="Delete(form.value)">Delete</button>
+
+  </form>
+
+  {{message |json}}
+</ion-content>
