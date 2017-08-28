@@ -24,7 +24,7 @@ export class FormPage {
   }
 
   Add(values){
-    this.htpp.put("https://phone-book-sailsx.herokuapp.com/contact/",values).map(res=> res).map(res=> res.json()).subscribe(data =>{ this.message=data.text()});
+    this.htpp.put("https://phone-book-sailsx.herokuapp.com/contact/",values).map(res=> res).subscribe(data =>{ this.message=data.text()});
     
   }
   Delete(values){
