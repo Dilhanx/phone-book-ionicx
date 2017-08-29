@@ -1,0 +1,7 @@
+{
+    "name": "Phone Book",
+    "description": "A phone book front end for the Sails back end",
+    "repository": "https://github.com/Dilhanx/phone-book-ionicx",
+    "logo": "http://pereless360.com/img/SP/Ghost/360-logo-white.png",
+    "keywords": ["ionic2", "heroku", "pereless360"]
+}
